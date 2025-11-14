@@ -33,8 +33,7 @@ export const validateCreatePet = [
     .withMessage("Sexo deve ser: macho ou femea"),
 
   body("cor")
-    .notEmpty()
-    .withMessage("Cor é obrigatória")
+    .optional()
     .isLength({ max: 30 })
     .withMessage("Cor deve ter no máximo 30 caracteres"),
 
@@ -179,7 +178,7 @@ export const validateUpdateStatus = [
     ),
 ];
 
-//  VALIDAÇÕES PARA CANDIDATOS
+// ========== VALIDAÇÕES PARA CANDIDATOS ==========
 
 // Validação para criar candidato
 export const validateCreateCandidato = [
@@ -264,7 +263,7 @@ export const validateCreateInteresse = [
     .withMessage("ID do pet deve ser uma string"),
 ];
 
-//  VALIDAÇÕES PARA ADOÇÕES
+// ========== VALIDAÇÕES PARA ADOÇÕES ==========
 
 // Validação para criar adoção
 export const validateCreateAdocao = [
